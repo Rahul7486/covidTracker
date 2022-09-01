@@ -1,0 +1,12 @@
+<div class="state_list_main p-2">
+  <select class="form-select">
+    <option class="form-input" *ngFor="let list of listState | keyvalue">
+      {{list.key}}
+    </option>
+  </select>
+</div>
+<!-- *ngFor="let list of listState | keyvalue" -->
+<!-- <p>{{listState}}</p> -->
+<pre>
+  {{listState | json}}
+</pre>

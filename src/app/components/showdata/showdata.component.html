@@ -1,0 +1,22 @@
+
+
+<div class="showData_main">
+  <div class="card w-25">
+    <h2 class="card_title">Maharastra</h2>
+    <h5 class="card_data text-success">123455 <span>Recover</span></h5>
+  </div>
+    <!-- <canvas baseChart
+        [data]="salesData"
+        [type]="'bar'"
+        [options]="chartOptions"
+      >
+      </canvas> -->
+  <div class="card w-25" *ngFor="let item of covidData | keyvalue">
+    <h2 class="card_title">Maharastra</h2>
+    <h5 class="card_data">123455</h5>
+    <h5 class="card_data">{{item | json}}</h5>
+  </div>
+</div>
+<pre>
+  {{covidData | json}}
+</pre>

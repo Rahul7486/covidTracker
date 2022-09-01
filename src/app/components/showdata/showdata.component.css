@@ -1,0 +1,17 @@
+.showData_main{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.showData_main .card{
+  box-shadow: 0px 2px 8px rgba(0,0,0,.15);
+  padding: 20px;
+}
+.showData_main .card_title{
+  color:#424242;
+  font-size: 24px;
+}
+.card_data span{
+  font-size: 15px;
+  color:#333;
+}

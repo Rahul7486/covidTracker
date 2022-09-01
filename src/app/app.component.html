@@ -1,0 +1,65 @@
+<div class="covid_main">
+  <div class="dash_title_main">
+    <div class="title">
+      <h3>
+        <p class="dash_title"><img src="../assets/icon.png" width="50px"> Covid-19 <span class="dash_desc"> Tracker India</span></p>
+      </h3>
+    </div>
+  </div>
+  <div class="dash_grid_main">
+    <div class="dash_grid">
+      <div class="left_side_main">
+        <h1 class="dash_desc m-2 text-dark">Select State</h1>
+        <div class="state_list_main p-2">
+          <select class="form-select" (change)="stateChange($event)">
+            <option class="form-input" *ngFor="let list of listState | keyvalue" [value]="list.key">
+              {{list.key}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="right_side_main">
+          <h1 class="dash_desc m-2"><p class="dash_title"><img src="../assets/icon.png" width="50px">District-Wise Covid Tracker Reports</h1>
+            <div class="dataCard_grid">
+              <div class="dataCard_main"  *ngFor="let dist of distListDsata">
+                <div class="dataTitle">
+                  <h3>{{dist?.name}}</h3>
+                </div>
+                <div class="dataContent">
+                  <div class="dataStas_main">
+                    <div class="dataStas">
+                      <img src="../assets/1.png">
+                      <p class="">Active</p>
+                      <span>{{dist?.active}}</span>
+                    </div>
+                    <div class="dataStas">
+                      <img src="../assets/2.png">
+                      <p class="">Confirmed</p>
+                      <span> {{dist?.confirmed}}</span>
+                    </div>
+                  </div>
+                  <div class="dataStas_main">
+                    <div class="dataStas">
+                      <img src="../assets/3.png">
+                      <p class="">Deceased</p>
+                      <span>{{dist?.deceased}}</span>
+                    </div>
+                    <div class="dataStas">
+                      <img src="../assets/4.png">
+                      <p class="">Recovered</p>
+                      <span>{{dist?.recovered}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- <pre>
+    {{covidData | json}}
+  </pre> -->
+  <footer>
+    <p>&copy; All Rights Reserve</p>
+  </footer>
+</div>
